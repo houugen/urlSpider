@@ -8,7 +8,7 @@ class BbjhSpider(CrawlSpider):
     item = BbjhSpiderItem()
 
     rules = (
-        Rule(LinkExtractor(allow='\.html', restrict_xpaths='//a[@href]'), callback='parse_item', follow=True),
+        Rule(LinkExtractor(allow='', restrict_xpaths='//a[@href]'), callback='parse_item', follow=True),
     )
 
     def __init__(self, url='www.bbjhart.com', *args, **kwargs):
